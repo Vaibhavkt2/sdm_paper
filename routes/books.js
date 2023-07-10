@@ -56,7 +56,7 @@ appForbooks.post("/", (request, response)=>{
 
 //PUT = UPDATE INTO DB
 appForbooks.put("/:id", (request, response)=>{
-    //response.send("EMPS PUT IS CALLED");
+  
     var query = 
     `update books set bookName = '${request.body.bookName}',
                     author = '${request.body.author}', bookType = '${request.body.bookType}', price = ${request.body.price}, publishDate = '${request.body.publishDate}', language = '${request.body.language}' where id = ${request.params.id}`;
